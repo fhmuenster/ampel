@@ -1,0 +1,78 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="txtLampOn" id="gC1z~L3F1Z3VS:4OC1t7" x="205" y="194">
+    <field name="output_ports">O1</field>
+    <value name="intensity">
+      <block type="math_number" id="/3PY!YkKwl8Mug=?xK6|">
+        <field name="NUM">512</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="e7dj.[LF%y2zKVGK{S4g">
+        <field name="MODE">WHILE</field>
+        <value name="BOOL">
+          <block type="logic_boolean" id="]j#Zu5de`qfBF|=bKmIA">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="8]bQ[U)AV;41IX6Tx%aj">
+            <value name="IF0">
+              <block type="txtButtonGetState" id="2K#]~i(^jq$?eg/?LrNP">
+                <field name="output_ports">I1</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="sleep" id="f-63mu{PB,@M4E{/uUJG">
+                <value name="amount">
+                  <block type="math_number" id="=/{:]k+KRvwYrwjxVE.!">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="txtLampOff" id="WbUqiX/~XK2XKkXsZ@KU">
+                    <field name="output_ports">O1</field>
+                    <next>
+                      <block type="txtLampOn" id="-0+[*%2AtC3d^ckhJEvd">
+                        <field name="output_ports">O2</field>
+                        <value name="intensity">
+                          <block type="math_number" id="*f+vdAGr}9E`G*z_1ig^">
+                            <field name="NUM">512</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="sleep" id="^akzYI:2q*3yOSRQU?{U">
+                            <value name="amount">
+                              <block type="math_number" id="ELBmELly*CIo0uZDIlvE">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="txtLampOff" id="79AcWpcN1xSFcOamT:4F">
+                                <field name="output_ports">O2</field>
+                                <next>
+                                  <block type="txtLampOn" id="7+Ik`1{0mAl5$0_i_U2#">
+                                    <field name="output_ports">O1</field>
+                                    <value name="intensity">
+                                      <block type="math_number" id="CKZ!3}Evc?D^In*mNCzk">
+                                        <field name="NUM">512</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

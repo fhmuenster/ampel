@@ -1,0 +1,11 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="txtLampOn" id="D3J-Tl[Ym]3sHkI9tzB+" x="105" y="140">
+    <field name="output_ports">O1</field>
+    <value name="intensity">
+      <block type="math_number" id="Jl6/xPC!!9DnjUj(iUAX">
+        <field name="NUM">255</field>
+      </block>
+    </value>
+  </block>
+</xml>
